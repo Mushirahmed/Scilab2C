@@ -17,6 +17,7 @@
 #include "floatComplex.h"
 #include "doubleComplex.h"
 #include "addition.h"
+#include "types.h"
 
 #ifdef  __cplusplus
 extern "C" {
@@ -27,7 +28,7 @@ extern "C" {
 */
 #define		ssums(in)			in
 #define		srowsums(in)			in
-#define		scolumnsums(in)		in
+#define		scolumnsums(in)		        in
 #define		smatlabsums(in)			in
 
 /*
@@ -35,7 +36,7 @@ extern "C" {
 */
 #define		dsums(in)			in
 #define		drowsums(in)			in
-#define		dcolumnsums(in)		in
+#define		dcolumnsums(in)		        in
 #define		dmatlabsums(in)			in
 
 /*
@@ -43,7 +44,7 @@ extern "C" {
 */
 #define		csums(in)			in
 #define		crowsums(in)			in
-#define		ccolumnsums(in)		in
+#define		ccolumnsums(in)		        in
 #define		cmatlabsums(in)			in
 
 /*
@@ -51,7 +52,7 @@ extern "C" {
 */
 #define		zsums(in)			in
 #define		zrowsums(in)			in
-#define		zcolumnsums(in)		in
+#define		zcolumnsums(in)		        in
 #define		zmatlabsums(in)			in
 
 /*
@@ -93,6 +94,44 @@ EXTERN_STATFUNC void		ccolumnsuma(floatComplex *in, int lines, int columns, floa
 EXTERN_STATFUNC doubleComplex	zsuma(doubleComplex *in, int size);
 EXTERN_STATFUNC void		zrowsuma(doubleComplex *in, int lines, int columns, doubleComplex* out);
 EXTERN_STATFUNC void		zcolumnsuma(doubleComplex *in, int lines, int columns, doubleComplex* out);
+
+/*
+** \brief Sum of a uint8 array
+** \param in the uint8 array to process
+** \param size, the size of the array
+** \returns the sum.
+*/
+EXTERN_STATFUNC void		u8rowsuma(uint8 *in, int lines, int columns, uint8* out);
+EXTERN_STATFUNC void		u8columnsuma(uint8 *in, int lines, int columns, uint8* out);
+
+
+/*
+** \brief Sum of a uint16 array
+** \param in the uint16 array to process
+** \param size, the size of the array
+** \returns the sum.
+*/
+EXTERN_STATFUNC void		u16rowsuma(uint16 *in, int lines, int columns, uint16* out);
+EXTERN_STATFUNC void		u16columnsuma(uint16 *in, int lines, int columns, uint16* out);
+
+/*
+** \brief Sum of a int8 array
+** \param in the int8 array to process
+** \param size, the size of the array
+** \returns the sum.
+*/
+EXTERN_STATFUNC void		i8rowsuma(int8 *in, int lines, int columns, int8* out);
+EXTERN_STATFUNC void		i8columnsuma(int8 *in, int lines, int columns, int8* out);
+
+/*
+** \brief Sum of a int16 array
+** \param in the int16 array to process
+** \param size, the size of the array
+** \returns the sum.
+*/
+EXTERN_STATFUNC void		i16rowsuma(int16 *in, int lines, int columns, int16* out);
+EXTERN_STATFUNC void		i16columnsuma(int16 *in, int lines, int columns, int16* out);
+
 
 
 #ifdef  __cplusplus

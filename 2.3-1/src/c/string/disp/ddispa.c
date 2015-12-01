@@ -11,7 +11,6 @@
  */
 
 #include "disp.h"
-
 double ddispa (double* in, int rows, int columns){
 	int i = 0,j = 0;
 	

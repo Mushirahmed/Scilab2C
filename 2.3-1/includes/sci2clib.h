@@ -300,8 +300,10 @@
 
 /* interfacing max */
 #include "statMax.h"
+#include "int_statMax.h"
 /* interfacing min */
 #include "statMin.h"
+#include "int_statMin.h"
 /* interfacing mean */
 #include "mean.h"
 #include "int_mean.h"
@@ -330,7 +332,7 @@
 #include "types.h"
 
 /*Scilab-arduino toolbox*/
-#include "int_cmd_digital_out.h"
+/*#include "int_cmd_digital_out.h"
 #include "cmd_digital_out.h"
 #include "int_cmd_digital_in.h"
 #include "cmd_digital_in.h"
@@ -339,6 +341,6 @@
 #include "int_cmd_analog_in.h"
 #include "cmd_analog_in.h"
 #include "int_sleep.h"
-#include "sleep.h"
+#include "sleep.h"*/
 
 #endif /* !__SCI2CLIB_H__ */

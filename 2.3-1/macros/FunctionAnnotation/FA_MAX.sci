@@ -30,17 +30,22 @@ SCI2CNInArgCheck(argn(2),2,2);
 // ------------------------
 if (isnum(in1))
    in1num = eval(in1);
+   disp(in1num,"in1num is : ");
    if (isnum(in2))
       in2num = eval(in2);
+      disp(in2num,"in2num is : ");
       outnum = max(in1num,in2num);
+      disp(outnum,"outnum is : ");
       if isnan(outnum)
          opout  = '__SCI2CNANSIZE';
       else
          opout  = string(outnum);
+         disp(opout,'Maximum is :');
       end
    else
       if (in1num == 1)
          opout  = string(in2);
+         disp(opout,'Maximum is when in1num is 1 :');
       end
    end
 else

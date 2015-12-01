@@ -95,7 +95,9 @@ global SCI2CHOME
 allSources = SCI2CHOME + "/" + getAllSources(OutFormat);
 allHeaders = SCI2CHOME + "/" +getAllHeaders(OutFormat);
 allInterfaces = SCI2CHOME + "/" + getAllInterfaces(OutFormat);
-
+//disp(allSources,'All Sources path')
+///disp(allHeaders,'All Headers path')
+//disp(allInterfaces,'All Interfaces path')
 mkdir(SCI2COutputPath+"/src/");
 mkdir(SCI2COutputPath+"/src/c/");
 mkdir(SCI2COutputPath+"/includes/");
@@ -103,6 +105,7 @@ mkdir(SCI2COutputPath+"/interfaces/");
 
 // -- Sources
 PrintStepInfo('Copying sources', FileInfo.GeneralReport,'both');
+//disp("Error Occurs");
 for i = 1:size(allSources, "*")
   // DEBUG only
   //disp("Copying "+allSources(i)+" in "+SCI2COutputPath+"/src/c/");

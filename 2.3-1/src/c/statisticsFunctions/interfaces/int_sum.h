@@ -23,6 +23,15 @@
 
 #define z0sumz0(in)				zsums(in)
 
+#define u80sumu80(in)				u8sums(in)
+
+#define u160sumu160(in)				u16sums(in)
+
+#define i80sumi80(in)				i8sums(in)
+
+#define i160sumi160(in)				i16sums(in)
+
+
 #define s2sums0(in,size)			ssuma(in, size[0]*size[1])
 
 #define d2sumd0(in,size)			dsuma(in, size[0]*size[1])
@@ -31,6 +40,13 @@
 
 #define z2sumz0(in,size)			zsuma(in, size[0]*size[1])
 
+#define u82sumu80(in,size)                      u8suma(in, size[0]*size[1])
+
+#define u162sumu160(in,size)                    u16suma(in, size[0]*size[1])
+
+#define i82sumi80(in,size)                      i8suma(in, size[0]*size[1])
+
+#define i162sumi160(in,size)                    i16suma(in, size[0]*size[1])
 
 #define s0s0sums0(in1,in2)			(in2==1) ? srowsums(in1) : scolumnsums(in1)	
 
@@ -38,7 +54,15 @@
 
 #define c0s0sumc0(in1,in2)			(in2==1) ? crowsums(in1) : ccolumnsums(in1)	
 
-#define z0d0sumz0(in1,in2)			(in2==1) ? zrowsums(in1) : zcolumnsums(in1)	
+#define z0d0sumz0(in1,in2)			(in2==1) ? zrowsums(in1) : zcolumnsums(in1)
+
+#define u80u80sumu80(in1,in2)			(in2==1) ? u8rowsums(in1) : u8columnsums(in1)	
+
+#define u160u160sumu160(in1,in2)		(in2==1) ? u16rowsums(in1) : u16columnsums(in1)	
+
+#define i80i80sumi80(in1,in2)			(in2==1) ? i8rowsums(in1) : i8columnsums(in1)	
+
+#define i160i160sumi160(in1,in2)		(in2==1) ? i16rowsums(in1) : i16columnsums(in1)	
 
 #define s2s0sums2(in1,size,in2,out)		(in2==1) ? srowsuma(in1,size[0],size[1],out) : scolumnsuma(in1,size[0],size[1],out)	
 
@@ -46,9 +70,16 @@
 
 #define c2s0sumc2(in1,size,in2,out)		(in2==1) ? crowsuma(in1,size[0],size[1],out) : ccolumnsuma(in1,size[0],size[1],out)
 
-#define z2d0sumz2(in1,size,in2,out)		(in2==1) ? zrowsuma(in1,size[0],size[1],out) : zcolumnsuma(in1,size[0],size[1],out)	
-		
-		
+#define z2d0sumz2(in1,size,in2,out)		(in2==1) ? zrowsuma(in1,size[0],size[1],out) : zcolumnsuma(in1,size[0],size[1],out)
+
+#define u82u80sumu82(in1,size,in2,out)		(in2==1) ? u8rowsuma(in1,size[0],size[1],out) : u8columnsuma(in1,size[0],size[1],out)
+
+#define u162u160sumu162(in1,size,in2,out)	(in2==1) ? u16rowsuma(in1,size[0],size[1],out) : u16columnsuma(in1,size[0],size[1],out)
+
+#define i82i80sumi82(in1,size,in2,out)		(in2==1) ? i8rowsuma(in1,size[0],size[1],out) : i8columnsuma(in1,size[0],size[1],out)
+
+#define i162i160sumi162(in1,size,in2,out)	(in2==1) ? i16rowsuma(in1,size[0],size[1],out) : i16columnsuma(in1,size[0],size[1],out)
+	
 /*'r'  and 'c' case  */	
 #define s0g2sums0(in1,in2,size2)			(in2[0]=='r') ? srowsums(in1) : scolumnsums(in1)	
 
@@ -56,7 +87,16 @@
 
 #define c0g2sumc0(in1,in2,size2)			(in2[0]=='r') ? crowsums(in1) : ccolumnsums(in1)	
 
-#define z0g2sumz0(in1,in2,size2)			(in2[0]=='r') ? zrowsums(in1) : zcolumnsums(in1)	
+#define z0g2sumz0(in1,in2,size2)			(in2[0]=='r') ? zrowsums(in1) : zcolumnsums(in1)
+
+#define u80g2sumu80(in1,in2,size2)			(in2[0]=='r') ? u8rowsums(in1) : u8columnsums(in1)
+
+#define u160g2sumu160(in1,in2,size2)			(in2[0]=='r') ? u16rowsums(in1) : u16columnsums(in1)
+
+#define i80g2sumi80(in1,in2,size2)			(in2[0]=='r') ? i8rowsums(in1) : i8columnsums(in1)
+
+#define i160g2sumi160(in1,in2,size2)			(in2[0]=='r') ? i16rowsums(in1) : i16columnsums(in1)	
+	
 
 #define s2g2sums2(in1,size,in2,size2,out)		(in2[0]=='r') ? srowsuma(in1,size[0],size[1],out) : scolumnsuma(in1,size[0],size[1],out)	
 
@@ -65,6 +105,15 @@
 #define c2g2sumc2(in1,size,in2,size2,out)		(in2[0]=='r') ? crowsuma(in1,size[0],size[1],out) : ccolumnsuma(in1,size[0],size[1],out)
 
 #define z2g2sumz2(in1,size,in2,size2,out)		(in2[0]=='r') ? zrowsuma(in1,size[0],size[1],out) : zcolumnsuma(in1,size[0],size[1],out)	
+
+#define u82g2sumu82(in1,size,in2,size2,out)		(in2[0]=='r') ? u8rowsuma(in1,size[0],size[1],out) : u8columnsuma(in1,size[0],size[1],out)	
+
+#define u162g2sumu162(in1,size,in2,size2,out)		(in2[0]=='r') ? u16rowsuma(in1,size[0],size[1],out) : u16columnsuma(in1,size[0],size[1],out)
 	
+#define i82g2sumi82(in1,size,in2,size2,out)		(in2[0]=='r') ? i8rowsuma(in1,size[0],size[1],out) : i8columnsuma(in1,size[0],size[1],out)	
+
+#define i162g2sumu162(in1,size,in2,size2,out)		(in2[0]=='r') ? i16rowsuma(in1,size[0],size[1],out) : i16columnsuma(in1,size[0],size[1],out)
+	
+
 
 #endif /* !__INT_SUM_H__ */

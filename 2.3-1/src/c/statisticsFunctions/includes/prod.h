@@ -16,6 +16,7 @@
 #include "dynlib_statisticsfunctions.h"
 #include "floatComplex.h"
 #include "doubleComplex.h"
+#include "types.h"
 
 #ifdef  __cplusplus
 extern "C" {
@@ -91,6 +92,47 @@ EXTERN_STATFUNC void		ccolumnproda(floatComplex *in, int lines, int columns, flo
 EXTERN_STATFUNC doubleComplex	zproda(doubleComplex *in, int size);
 EXTERN_STATFUNC void		zrowproda(doubleComplex *in, int lines, int columns, doubleComplex* out);
 EXTERN_STATFUNC void		zcolumnproda(doubleComplex *in, int lines, int columns, doubleComplex* out);
+
+/*
+** \brief Sum of a uint8 array
+** \param in the uint8 to process
+** \param size, the size of the array
+** \returns the prod.
+*/
+EXTERN_STATFUNC uint8	u8proda(uint8 *in, int size);
+EXTERN_STATFUNC void	u8rowproda(uint8 *in, int lines, int columns, uint8* out);
+EXTERN_STATFUNC void	u8columnproda(uint8 *in, int lines, int columns, uint8* out);
+
+/*
+** \brief Sum of a uint16 array
+** \param in the uint16 to process
+** \param size, the size of the array
+** \returns the prod.
+*/
+EXTERN_STATFUNC uint16	u16proda(uint16 *in, int size);
+EXTERN_STATFUNC void	u16rowproda(uint16 *in, int lines, int columns, uint16* out);
+EXTERN_STATFUNC void	u16columnproda(uint16 *in, int lines, int columns, uint16* out);
+
+/*
+** \brief Sum of a int8 array
+** \param in the int8 to process
+** \param size, the size of the array
+** \returns the prod.
+*/
+EXTERN_STATFUNC int8	i8proda(int8 *in, int size);
+EXTERN_STATFUNC void	i8rowproda(int8 *in, int lines, int columns, int8* out);
+EXTERN_STATFUNC void	i8columnproda(int8 *in, int lines, int columns, int8* out);
+
+/*
+** \brief Sum of a int16 array
+** \param in the int16 to process
+** \param size, the size of the array
+** \returns the prod.
+*/
+EXTERN_STATFUNC int16	i16proda(int16 *in, int size);
+EXTERN_STATFUNC void	i16rowproda(int16 *in, int lines, int columns, int16* out);
+EXTERN_STATFUNC void	i16columnproda(int16 *in, int lines, int columns, int16* out);
+
 
 #ifdef  __cplusplus
 } /* extern "C" */

@@ -56,11 +56,18 @@ SCI2CNInArgCheck(argn(2),2,2);
 in1size = string(in1size);
 in2size = string(in2size);
 in1dim = GetSymbolDimension(in1size);
+in2dim = GetSymbolDimension(in2size);
+disp(in1size,"in1size in FA_SZ_OPPLUSA is : ");
+disp(in2size,"in2size in FA_SZ_OPPLUSA is : ")
+disp(in1dim, "in1dim in FA_SZ_OPPLUSA is : ");
+disp(in2dim,"in2dim in FA_SZ_OPPLUSA is : ");
 
 if (in1dim == 0)
    opoutsize = in2size;
+   disp(opoutsize,"opoutsize if in1dim = 0 : ");
 else
    opoutsize = in1size;
+   disp(opoutsize,"opoutsize if in1dim not 0 : ");
 end
 
 endfunction

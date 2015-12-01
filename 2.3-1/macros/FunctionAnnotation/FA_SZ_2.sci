@@ -17,4 +17,5 @@ function outsize = FA_SZ_2(insize)
 // -----------------------------------------------------------------
 
 outsize = insize(2);
+disp(outsize,"outsize inside FA_SZ_2.sci file  i.e insize(2) is : ");
 endfunction 

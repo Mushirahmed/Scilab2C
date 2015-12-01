@@ -42,7 +42,9 @@ load(FileInfo.SharedInfoDatFile,'SharedInfo');
 nxtscifunname   = SharedInfo.NextSCIFunName;
 nxtscifunnumber = SharedInfo.NextSCIFunNumber;
 ReportFileName  = FileInfo.Funct(nxtscifunnumber).ReportFileName;
-
+disp(nxtscifunname,"NextSciFunName in AST2Ccode.sci")
+disp(nxtscifunnumber,"NextSciFunNumber in AST2Ccode.sci")
+disp(ReportFileNamme,"ReportFileName in AST2Ccode.sci")
 // ---------------------------------
 // --- Parameter Initialization. ---
 // ---------------------------------
@@ -59,6 +61,7 @@ STACKDEDUG = 0; // 1 -> Every Pop and Push operation on the stack, the stack con
 // -------------------------------------
 
 ASTFileName = FileInfo.Funct(nxtscifunnumber).ASTFileName;
+disp(ASTFileName,"ASTFileName in AST2Ccode.sci ")
 
 // -----------------------
 // --- Initialization. ---
@@ -80,6 +83,7 @@ PrintStepInfo('Generate C code in '+FileInfo.Funct(nxtscifunnumber).FinalCFileNa
 // --- Parse AST header. ---
 // ------------------------
 ASTHeader  = AST_ReadASTHeader(fidAST,ReportFileName);
+disp(ASTHeader,"ASTHeader in AST2Ccode.sci")
 SharedInfo = AST_HandleHeader(ASTHeader,FileInfo,SharedInfo);
 //NUT: le metto per ora perche' quando provo a cercare lo specifier di precisione al termine
 //NUT: del programma non ho piu' nulla da poppare se lo specifier e' assente. Al limite posso mettere la program e i nomi
@@ -119,7 +123,7 @@ while ~meof(fidAST)
    treeline = stripblanks(tline);
 
    if STACKDEDUG == 1
-      disp('Read AST Line: '+treeline);
+      disp('Read AST Line: in AST2Ccode.sci '+treeline);
    end
 
    // Analyze line.

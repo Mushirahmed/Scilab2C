@@ -18,12 +18,13 @@ function SciFile2ASTFile(SciFile,ASTFile);
 // Copyright 2007 Raffaele Nutricato.
 // Contact: raffaele.nutricato@tiscali.it
 // -----------------------------------------------------------------
-
+//disp(SciFile,"SciFile is : ")
 exec(SciFile);
 [tmppath,ScilabFunName,tmpext] = fileparts(SciFile);
+//disp(ScilabFunName,"ScilabFunName is : ");
 AST=eval('macr2tree('+ScilabFunName+')');
-
-
+//disp(ASTFile,"AST File is : ")
+//disp(AST,"AST is : ")
 [ASTx,ASTierr]=fileinfo(ASTFile);
 if ASTierr == 0
    mdelete(ASTFile);

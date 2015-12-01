@@ -69,11 +69,13 @@ OutCCCodeDir = SCI2CResultDir;
 //-- FIXME : MainLibHeader and Verbose mode are (?) configurable
 SharedInfo = INIT_GenSharedInfo(RunMode,UserScilabMainFile, ...
 				TotTempScalarVars,EnableTempVarsReuse,"sci2clib.h", %t,OutFormat);
+disp("SharedInfo is :",SharedInfo)
 
 // ----------------------------
 // --- Initialize FileInfo. ---
 // ----------------------------
 FileInfo = INIT_GenFileInfo(WorkingDir,OutCCCodeDir,UserSciFilesPaths);
+disp("FileInfo is : ",FileInfo)
 PrintStepInfo('SCI2C hArtes/POLIBA Tool!!!',FileInfo.GeneralReport,'stdout');
 
 // ----------------------------------------------------
@@ -140,6 +142,8 @@ save(FileInfo.FileInfoDatFile, "FileInfo");
 save(FileInfo.SharedInfoDatFile, "SharedInfo");
 FileInfoDatFile = FileInfo.FileInfoDatFile;
 SharedInfoDatFile = FileInfo.SharedInfoDatFile;
+disp("FileInfoDatFile is : ",FileInfoDatFile);
+disp("SharedInfoDatFile is : ",SharedInfoDatFile);
 
 global anscounter; //NUT: just to fix problem with ans variables.
 anscounter = 0;

@@ -14,7 +14,8 @@
 
 void cadda(floatComplex* in1, int size1, floatComplex* in2, int size2, floatComplex* out) {
   int i = 0;
-  for (i = 0; i < size1 && i < size2; ++i) {
+  for (i = 0; i < size1 && i < size2; ++i) 
+  {
     out[i] = cadds(in1[i], in2[i]);
   }
 }

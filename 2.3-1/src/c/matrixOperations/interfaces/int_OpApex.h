@@ -23,6 +23,14 @@
 
 #define z0OpApexz0(in)			zconjs(in)
 
+#define u80OpApexu80(in)		(uint8)in
+
+#define u160OpApexu160(in)		(uint16)in
+
+#define i80OpApexi80(in)		(int8)in
+
+#define i160OpApexi160(in)		(int16)in
+
 #define s2OpApexs2(in,size,out)		stransposea(in,size[0],size[1],out);
 
 #define d2OpApexd2(in,size,out)		dtransposea(in,size[0],size[1],out);
@@ -30,5 +38,13 @@
 #define c2OpApexc2(in,size,out)		ctransposea(in,size[0],size[1],out);cconja(out,size[0]*size[1],out);
 
 #define z2OpApexz2(in,size,out)		ztransposea(in,size[0],size[1],out);zconja(out,size[0]*size[1],out);
+
+#define u82OpApexu82(in,size,out)		u8transposea(in, size[0], size[1], out)
+
+#define u162OpApexu162(in,size,out)		u16transposea(in, size[0], size[1], out)
+
+#define i82OpApexi82(in,size,out)	        i8transposea(in, size[0], size[1], out)
+
+#define i162OpApexi162(in,size,out)		i16transposea(in, size[0], size[1], out)
 
 #endif /* !__INT_OPAPEX_H__ */
